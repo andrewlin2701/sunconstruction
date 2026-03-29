@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sun Construction</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HOME PAGE ===== -->
+  <div id="page-home" class="page active">
+    <nav class="navbar">
+      <span class="logo">Sun Construction</span>
+      <div class="nav-links">
+        <button onclick="showPage('page-gallery')">Projects</button>
+        <button onclick="showPage('page-services')">Services</button>
+        <button onclick="showPage('page-contact')">Contact Info</button>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="hero-overlay"></div>
+      <img class="hero-img" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1600&q=80" alt="Beautiful house" />
+      <div class="hero-text">
+        <h1>Building Your Dream Home</h1>
+        <p>Quality construction &amp; renovation services you can trust</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== GALLERY PAGE ===== -->
+  <div id="page-gallery" class="page">
+    <nav class="navbar">
+      <span class="logo">Sun Construction</span>
+      <div class="nav-links">
+        <button onclick="showPage('page-gallery')">Projects</button>
+        <button onclick="showPage('page-services')">Services</button>
+        <button onclick="showPage('page-contact')">Contact Info</button>
+      </div>
+    </nav>
+    <div class="page-content">
+      <button class="back-btn" onclick="goBack()">&#8592; Back</button>
+      <h1 class="page-title">Gallery</h1>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </div>
+
+  <!-- ===== PROJECT DETAIL PAGE ===== -->
+  <div id="page-project" class="page">
+    <nav class="navbar">
+      <span class="logo">Sun Construction</span>
+      <div class="nav-links">
+        <button onclick="showPage('page-gallery')">Projects</button>
+        <button onclick="showPage('page-services')">Services</button>
+        <button onclick="showPage('page-contact')">Contact Info</button>
+      </div>
+    </nav>
+    <div class="page-content">
+      <button class="back-btn" onclick="goBack()">&#8592; Back</button>
+      <div id="project-detail"></div>
+    </div>
+  </div>
+
+  <!-- ===== SERVICES PAGE ===== -->
+  <div id="page-services" class="page">
+    <nav class="navbar">
+      <span class="logo">Sun Construction</span>
+      <div class="nav-links">
+        <button onclick="showPage('page-gallery')">Projects</button>
+        <button onclick="showPage('page-services')">Services</button>
+        <button onclick="showPage('page-contact')">Contact Info</button>
+      </div>
+    </nav>
+    <div class="page-content">
+      <button class="back-btn" onclick="goBack()">&#8592; Back</button>
+      <h1 class="page-title">Our Services</h1>
+      <div class="services-list">
+        <div class="service-card">
+          <div class="service-header">
+            <h2>ADU</h2>
+            <span class="service-tag">Accessory Dwelling Unit</span>
+          </div>
+          <p>A self-contained living unit attached to or located on the same property as your primary residence. ADUs are ideal for generating rental income, housing family members, or creating a private home office. We handle all permitting, design, and construction from start to finish.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-header">
+            <h2>DADU</h2>
+            <span class="service-tag">Detached Accessory Dwelling Unit</span>
+          </div>
+          <p>A fully independent structure built on your property, separate from the main house. DADUs offer more privacy and flexibility than attached units — perfect for guest houses, long-term rentals, or a dedicated studio space. We build to local code and maximize your lot's potential.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-header">
+            <h2>Renovation</h2>
+            <span class="service-tag">Interior &amp; Exterior Remodeling</span>
+          </div>
+          <p>Complete remodeling services for kitchens, bathrooms, living spaces, and building facades. Whether you want a modern refresh or a full structural overhaul, we work to preserve the character of your home while bringing it up to current standards of comfort and efficiency.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-header">
+            <h2>New House</h2>
+            <span class="service-tag">Custom Home Construction</span>
+          </div>
+          <p>Full-service custom home construction from the ground up. We partner with you from initial architectural planning and permitting through framing, finishing, and final walkthrough. Every home we build is crafted with quality materials and meticulous attention to detail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT PAGE ===== -->
+  <div id="page-contact" class="page">
+    <nav class="navbar">
+      <span class="logo">Sun Construction</span>
+      <div class="nav-links">
+        <button onclick="showPage('page-gallery')">Projects</button>
+        <button onclick="showPage('page-services')">Services</button>
+        <button onclick="showPage('page-contact')">Contact Info</button>
+      </div>
+    </nav>
+    <div class="page-content">
+      <button class="back-btn" onclick="goBack()">&#8592; Back</button>
+      <h1 class="page-title">Contact Us</h1>
+      <div class="contact-card">
+        <p class="contact-tagline">Ready to start your project? Get in touch today.</p>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <span class="contact-label">Phone</span>
+            <a href="tel:6077618372" class="contact-value">(607) 761-8372</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <span class="contact-label">Email</span>
+            <a href="mailto:sunhuayu1982@gmail.com" class="contact-value">sunhuayu1982@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
